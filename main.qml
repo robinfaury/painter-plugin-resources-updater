@@ -20,12 +20,8 @@ PainterPlugin
 	
 	Component.onCompleted:
 	{
-		if (minorVersion <= alg.version.api) {
-			var qmlToolbar = alg.ui.addToolBarWidget( "toolbar.qml" )
-			qmlToolbar.windowReference = window
-		} else {
-			alg.log.warn("Resource Updater Plugin need Substance Painter scripting API "+minorVersion+" or higher")
-		}
+		var qmlToolbar = alg.ui.addToolBarWidget( "toolbar.qml" )
+		qmlToolbar.windowReference = window
 	}
 	
 	onNewProjectCreated:
